@@ -216,3 +216,10 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+
+data/celeba/
+outputs/stickered_images/
+outputs/sanity_checks/
+outputs/results/
+outputs/plots/

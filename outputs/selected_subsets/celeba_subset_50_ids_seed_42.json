@@ -1,0 +1,210 @@
+{
+  "metadata": {
+    "dataset": "CelebA",
+    "n_identities": 50,
+    "seed": 42,
+    "description": "Fixed identity-pair subset for privacy sticker experiments."
+  },
+  "pairs": {
+    "7469": {
+      "reference": "056381.jpg",
+      "probe": "145987.jpg"
+    },
+    "7133": {
+      "reference": "106681.jpg",
+      "probe": "152218.jpg"
+    },
+    "5233": {
+      "reference": "054783.jpg",
+      "probe": "121188.jpg"
+    },
+    "2101": {
+      "reference": "038588.jpg",
+      "probe": "114211.jpg"
+    },
+    "7317": {
+      "reference": "029843.jpg",
+      "probe": "010705.jpg"
+    },
+    "1804": {
+      "reference": "041356.jpg",
+      "probe": "042743.jpg"
+    },
+    "4520": {
+      "reference": "005646.jpg",
+      "probe": "012716.jpg"
+    },
+    "4372": {
+      "reference": "181899.jpg",
+      "probe": "165956.jpg"
+    },
+    "3881": {
+      "reference": "111128.jpg",
+      "probe": "101812.jpg"
+    },
+    "6958": {
+      "reference": "193277.jpg",
+      "probe": "195098.jpg"
+    },
+    "979": {
+      "reference": "089381.jpg",
+      "probe": "061493.jpg"
+    },
+    "2818": {
+      "reference": "100340.jpg",
+      "probe": "160662.jpg"
+    },
+    "3356": {
+      "reference": "024656.jpg",
+      "probe": "093952.jpg"
+    },
+    "7167": {
+      "reference": "058171.jpg",
+      "probe": "140858.jpg"
+    },
+    "4206": {
+      "reference": "150649.jpg",
+      "probe": "011773.jpg"
+    },
+    "1125": {
+      "reference": "123382.jpg",
+      "probe": "127407.jpg"
+    },
+    "4655": {
+      "reference": "167925.jpg",
+      "probe": "176855.jpg"
+    },
+    "9841": {
+      "reference": "200064.jpg",
+      "probe": "187387.jpg"
+    },
+    "8142": {
+      "reference": "047148.jpg",
+      "probe": "129824.jpg"
+    },
+    "7370": {
+      "reference": "193366.jpg",
+      "probe": "188726.jpg"
+    },
+    "8400": {
+      "reference": "124579.jpg",
+      "probe": "131506.jpg"
+    },
+    "893": {
+      "reference": "177029.jpg",
+      "probe": "168619.jpg"
+    },
+    "8376": {
+      "reference": "120760.jpg",
+      "probe": "085926.jpg"
+    },
+    "2400": {
+      "reference": "162660.jpg",
+      "probe": "006413.jpg"
+    },
+    "329": {
+      "reference": "037185.jpg",
+      "probe": "027844.jpg"
+    },
+    "9463": {
+      "reference": "189768.jpg",
+      "probe": "191005.jpg"
+    },
+    "655": {
+      "reference": "076388.jpg",
+      "probe": "026452.jpg"
+    },
+    "3325": {
+      "reference": "027692.jpg",
+      "probe": "160601.jpg"
+    },
+    "6445": {
+      "reference": "136823.jpg",
+      "probe": "154401.jpg"
+    },
+    "2702": {
+      "reference": "107665.jpg",
+      "probe": "054597.jpg"
+    },
+    "3628": {
+      "reference": "126038.jpg",
+      "probe": "100173.jpg"
+    },
+    "279": {
+      "reference": "087502.jpg",
+      "probe": "140274.jpg"
+    },
+    "339": {
+      "reference": "124760.jpg",
+      "probe": "037698.jpg"
+    },
+    "489": {
+      "reference": "062083.jpg",
+      "probe": "041205.jpg"
+    },
+    "8914": {
+      "reference": "050155.jpg",
+      "probe": "128645.jpg"
+    },
+    "6773": {
+      "reference": "140078.jpg",
+      "probe": "147600.jpg"
+    },
+    "6064": {
+      "reference": "045386.jpg",
+      "probe": "138807.jpg"
+    },
+    "8182": {
+      "reference": "110273.jpg",
+      "probe": "013911.jpg"
+    },
+    "4554": {
+      "reference": "072483.jpg",
+      "probe": "064226.jpg"
+    },
+    "4946": {
+      "reference": "031325.jpg",
+      "probe": "107468.jpg"
+    },
+    "8206": {
+      "reference": "076476.jpg",
+      "probe": "021507.jpg"
+    },
+    "9985": {
+      "reference": "199991.jpg",
+      "probe": "185100.jpg"
+    },
+    "8115": {
+      "reference": "024696.jpg",
+      "probe": "033965.jpg"
+    },
+    "6079": {
+      "reference": "119466.jpg",
+      "probe": "036583.jpg"
+    },
+    "2462": {
+      "reference": "098426.jpg",
+      "probe": "061199.jpg"
+    },
+    "1658": {
+      "reference": "175442.jpg",
+      "probe": "180813.jpg"
+    },
+    "4709": {
+      "reference": "142741.jpg",
+      "probe": "156143.jpg"
+    },
+    "3715": {
+      "reference": "063619.jpg",
+      "probe": "102671.jpg"
+    },
+    "9115": {
+      "reference": "001445.jpg",
+      "probe": "012685.jpg"
+    },
+    "2036": {
+      "reference": "173795.jpg",
+      "probe": "166140.jpg"
+    }
+  }
+}

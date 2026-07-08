@@ -1,0 +1,9 @@
+numpy
+pandas
+pillow
+matplotlib
+tqdm
+torch
+torchvision
+gdown
+facenet-pytorch
