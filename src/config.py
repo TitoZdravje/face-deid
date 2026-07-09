@@ -44,3 +44,12 @@ STICKER_GRID_ANALYSIS_SUMMARY_FILE = RESULTS_DIR / "sticker_grid_facenet_summary
 STICKER_GRID_ANALYSIS_JSON_FILE = RESULTS_DIR / "sticker_grid_facenet_summary.json"
 
 TOP_STICKER_EXAMPLES_DIR = SANITY_CHECKS_DIR / "top_sticker_examples"
+
+
+EXTERNAL_SELECTED_STICKERS_DIR = STICKERS_DIR / "external_selected"
+GENERATED_STICKERS_V2_DIR = STICKERS_DIR / "generated_v2"
+CURATED_STICKERS_V2_DIR = STICKERS_DIR / "curated_v2"
+
+STICKER_METADATA_GENERATED_V2_FILE = STICKERS_DIR / "sticker_metadata_generated_v2.json"
+STICKER_METADATA_EXTERNAL_V2_FILE = STICKERS_DIR / "sticker_metadata_external_v2.json"
+STICKER_METADATA_V2_FILE = STICKERS_DIR / "sticker_metadata_v2.json"
