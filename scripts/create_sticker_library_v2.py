@@ -20,6 +20,120 @@ OUTPUT_SIZE = 256
 RNG_SEED = 42
 
 
+EXTERNAL_STICKER_METADATA = {
+    "adhesive_bandage": {
+        "category": "accessory",
+        "motif": "adhesive_bandage",
+        "color_family": "beige",
+        "pattern_type": "emoji",
+        "source_type": "external",
+        "source": "OpenMoji",
+        "source_url": "https://openmoji.org/library/emoji-1FA79/",
+        "license": "CC BY-SA 4.0",
+    },
+    "biting_lip": {
+        "category": "face_part_graphic",
+        "motif": "biting_lip",
+        "color_family": "red",
+        "pattern_type": "emoji",
+        "source_type": "external",
+        "source": "OpenMoji",
+        "source_url": "https://openmoji.org/library/emoji-1FAE6/",
+        "license": "CC BY-SA 4.0",
+    },
+    "butterfly": {
+        "category": "social_icon",
+        "motif": "butterfly",
+        "color_family": "mixed",
+        "pattern_type": "emoji",
+        "source_type": "external",
+        "source": "OpenMoji",
+        "source_url": "https://openmoji.org/library/emoji-1F98B/",
+        "license": "CC BY-SA 4.0",
+    },
+    "eye": {
+        "category": "face_part_graphic",
+        "motif": "eye",
+        "color_family": "mixed",
+        "pattern_type": "emoji",
+        "source_type": "external",
+        "source": "OpenMoji",
+        "source_url": "https://openmoji.org/library/emoji-1F441/",
+        "license": "CC BY-SA 4.0",
+    },
+    "eyes": {
+        "category": "face_part_graphic",
+        "motif": "eyes",
+        "color_family": "mixed",
+        "pattern_type": "emoji",
+        "source_type": "external",
+        "source": "OpenMoji",
+        "source_url": "https://openmoji.org/library/emoji-1F440/",
+        "license": "CC BY-SA 4.0",
+    },
+    "mouth": {
+        "category": "face_part_graphic",
+        "motif": "mouth",
+        "color_family": "red",
+        "pattern_type": "emoji",
+        "source_type": "external",
+        "source": "OpenMoji",
+        "source_url": "https://openmoji.org/library/emoji-1F444/",
+        "license": "CC BY-SA 4.0",
+    },
+    "red_heart": {
+        "category": "social_icon",
+        "motif": "heart",
+        "color_family": "red",
+        "pattern_type": "emoji",
+        "source_type": "external",
+        "source": "OpenMoji",
+        "source_url": "https://openmoji.org/library/emoji-2764/",
+        "license": "CC BY-SA 4.0",
+    },
+    "sparkles": {
+        "category": "social_icon",
+        "motif": "sparkles",
+        "color_family": "yellow",
+        "pattern_type": "emoji",
+        "source_type": "external",
+        "source": "OpenMoji",
+        "source_url": "https://openmoji.org/library/emoji-2728/",
+        "license": "CC BY-SA 4.0",
+    },
+    "sparkling_heart": {
+        "category": "social_icon",
+        "motif": "sparkling_heart",
+        "color_family": "pink",
+        "pattern_type": "emoji",
+        "source_type": "external",
+        "source": "OpenMoji",
+        "source_url": "https://openmoji.org/library/emoji-1F496/",
+        "license": "CC BY-SA 4.0",
+    },
+    "star": {
+        "category": "social_icon",
+        "motif": "star",
+        "color_family": "yellow",
+        "pattern_type": "emoji",
+        "source_type": "external",
+        "source": "OpenMoji",
+        "source_url": "https://openmoji.org/library/emoji-2B50/",
+        "license": "CC BY-SA 4.0",
+    },
+    "white_flower": {
+        "category": "social_icon",
+        "motif": "flower",
+        "color_family": "white",
+        "pattern_type": "emoji",
+        "source_type": "external",
+        "source": "OpenMoji",
+        "source_url": "https://openmoji.org/library/emoji-1F4AE/",
+        "license": "CC BY-SA 4.0",
+    },
+}
+
+
 def rgba(hex_color: str, alpha: int = 255):
     hex_color = hex_color.lstrip("#")
     return (
@@ -345,198 +459,9 @@ def create_highlight_patch():
     return color
 
 
-# -------------------------
-# Face-part graphics
-# -------------------------
-
-
-def create_moustache():
-    img = new_canvas()
-    draw = ImageDraw.Draw(img)
-
-    draw.ellipse((85, 210, 275, 340), fill=(35, 20, 15, 235))
-    draw.ellipse((237, 210, 427, 340), fill=(35, 20, 15, 235))
-    draw.polygon(
-        [(256, 265), (70, 310), (120, 360)],
-        fill=(35, 20, 15, 235),
-    )
-    draw.polygon(
-        [(256, 265), (442, 310), (392, 360)],
-        fill=(35, 20, 15, 235),
-    )
-
-    # center cutout for a more moustache-like shape
-    draw.ellipse((225, 245, 287, 320), fill=(0, 0, 0, 0))
-
-    return img.filter(ImageFilter.GaussianBlur(0.8))
-
-
-def create_eyebrow_pair():
-    img = new_canvas()
-    draw = ImageDraw.Draw(img)
-
-    draw.arc(
-        (70, 145, 235, 260),
-        start=200,
-        end=340,
-        fill=(40, 25, 18, 235),
-        width=34,
-    )
-    draw.arc(
-        (277, 145, 442, 260),
-        start=200,
-        end=340,
-        fill=(40, 25, 18, 235),
-        width=34,
-    )
-
-    return img.filter(ImageFilter.GaussianBlur(0.5))
-
-
-def create_cartoon_eye():
-    img = new_canvas()
-    draw = ImageDraw.Draw(img)
-
-    draw.ellipse((110, 120, 402, 392), fill=(255, 255, 255, 240))
-    draw.ellipse((190, 180, 322, 312), fill=(70, 140, 220, 245))
-    draw.ellipse((225, 215, 287, 277), fill=(20, 20, 30, 245))
-    draw.ellipse((235, 200, 260, 225), fill=(255, 255, 255, 220))
-
-    draw.arc(
-        (95, 110, 417, 402),
-        start=180,
-        end=360,
-        fill=(30, 20, 20, 230),
-        width=18,
-    )
-
-    return img
-
-
-def create_lips():
-    img = new_canvas()
-    draw = ImageDraw.Draw(img)
-
-    draw.ellipse((90, 180, 260, 285), fill=(190, 30, 70, 230))
-    draw.ellipse((252, 180, 422, 285), fill=(190, 30, 70, 230))
-    draw.polygon(
-        [(95, 245), (417, 245), (256, 355)],
-        fill=(160, 20, 55, 230),
-    )
-    draw.line((130, 252, 382, 252), fill=(90, 10, 35, 200), width=8)
-
-    return img.filter(ImageFilter.GaussianBlur(0.5))
-
-
-# -------------------------
-# Accessories
-# -------------------------
-
-
-def create_sunglasses():
-    img = new_canvas()
-    draw = ImageDraw.Draw(img)
-
-    draw.rounded_rectangle(
-        (60, 175, 220, 315),
-        radius=36,
-        fill=(10, 10, 12, 240),
-    )
-    draw.rounded_rectangle(
-        (292, 175, 452, 315),
-        radius=36,
-        fill=(10, 10, 12, 240),
-    )
-    draw.rectangle((220, 230, 292, 260), fill=(10, 10, 12, 240))
-
-    # subtle highlight
-    draw.line((90, 205, 160, 185), fill=(255, 255, 255, 80), width=10)
-    draw.line((322, 205, 392, 185), fill=(255, 255, 255, 80), width=10)
-
-    return img
-
-
-def create_bandage():
-    img = new_canvas()
-    draw = ImageDraw.Draw(img)
-
-    draw.rounded_rectangle(
-        (65, 190, 447, 320),
-        radius=38,
-        fill=(232, 188, 145, 235),
-    )
-
-    draw.rounded_rectangle(
-        (198, 170, 314, 340),
-        radius=28,
-        fill=(220, 170, 125, 245),
-    )
-
-    for x in [105, 145, 370, 410]:
-        for y in [230, 280]:
-            draw.ellipse((x - 8, y - 8, x + 8, y + 8), fill=(180, 125, 95, 160))
-
-    return img.filter(ImageFilter.GaussianBlur(0.3))
-
-
-def create_nose_strip():
-    img = new_canvas()
-    draw = ImageDraw.Draw(img)
-
-    draw.rounded_rectangle(
-        (155, 120, 357, 390),
-        radius=55,
-        fill=(235, 200, 170, 215),
-    )
-
-    draw.line((210, 160, 302, 350), fill=(255, 235, 210, 120), width=18)
-
-    return img.filter(ImageFilter.GaussianBlur(0.8))
-
-
-def create_face_gems():
-    img = new_canvas()
-    draw = ImageDraw.Draw(img)
-
-    gems = [
-        (256, 130, 18),
-        (205, 200, 14),
-        (307, 200, 14),
-        (170, 285, 11),
-        (342, 285, 11),
-    ]
-
-    for x, y, r in gems:
-        points = [
-            (x, y - r),
-            (x + r, y),
-            (x, y + r),
-            (x - r, y),
-        ]
-        draw.polygon(points, fill=(180, 235, 255, 220))
-        draw.line(points + [points[0]], fill=(60, 120, 160, 190), width=3)
-
-    return img
-
-
-def create_tattoo_line():
-    img = new_canvas()
-    draw = ImageDraw.Draw(img)
-
-    draw.arc(
-        (120, 100, 420, 420),
-        start=210,
-        end=330,
-        fill=(25, 25, 35, 210),
-        width=20,
-    )
-
-    for i in range(6):
-        x = 160 + i * 38
-        y = 265 + int(25 * math.sin(i))
-        draw.line((x, y, x + 20, y + 42), fill=(25, 25, 35, 190), width=10)
-
-    return img.filter(ImageFilter.GaussianBlur(0.4))
+# Recognizable objects such as emojis, face parts, glasses, bandages, and
+# decorative symbols should be downloaded as open-source assets instead of
+# being approximated with ImageDraw.
 
 
 def generate_procedural_stickers():
@@ -667,52 +592,6 @@ def generate_procedural_stickers():
             "gold",
             "soft_blob",
         ),
-        # face_part_graphic
-        (
-            "moustache",
-            create_moustache,
-            "face_part_graphic",
-            "moustache",
-            "black",
-            "graphic",
-        ),
-        (
-            "eyebrow_pair",
-            create_eyebrow_pair,
-            "face_part_graphic",
-            "eyebrow",
-            "brown",
-            "graphic",
-        ),
-        (
-            "cartoon_eye",
-            create_cartoon_eye,
-            "face_part_graphic",
-            "eye",
-            "blue",
-            "graphic",
-        ),
-        ("lips", create_lips, "face_part_graphic", "lips", "red", "graphic"),
-        # accessory
-        (
-            "sunglasses",
-            create_sunglasses,
-            "accessory",
-            "sunglasses",
-            "black",
-            "graphic",
-        ),
-        ("bandage", create_bandage, "accessory", "bandage", "skin_medium", "graphic"),
-        (
-            "nose_strip",
-            create_nose_strip,
-            "accessory",
-            "nose_strip",
-            "skin_light",
-            "soft_solid",
-        ),
-        ("face_gems", create_face_gems, "accessory", "gems", "blue", "sparkles"),
-        ("tattoo_line", create_tattoo_line, "accessory", "tattoo", "black", "line"),
     ]
 
     for name, fn, category, motif, color_family, pattern_type in specs:
@@ -761,11 +640,7 @@ def copy_pngs_to_curated(source_dir: Path, target_dir: Path):
 
 def build_combined_metadata(generated_metadata: dict):
     """
-    External stickers are copied into curated_v2, but their metadata should be
-    added manually in sticker_metadata_external_v2.json or edited later.
-
-    This function creates combined metadata for generated stickers only.
-    You can extend it after selecting your 5 emoji stickers.
+    Builds one metadata file for the generated and selected external stickers.
     """
 
     combined = {}
@@ -773,6 +648,24 @@ def build_combined_metadata(generated_metadata: dict):
     for name, item in generated_metadata.items():
         item = dict(item)
         item["file"] = str(CURATED_STICKERS_V2_DIR / f"{name}.png")
+        combined[name] = item
+
+    external_files = {
+        path.stem: path for path in sorted(EXTERNAL_SELECTED_STICKERS_DIR.glob("*.png"))
+    }
+
+    missing_metadata = sorted(set(external_files) - set(EXTERNAL_STICKER_METADATA))
+    if missing_metadata:
+        raise ValueError(
+            "Missing external sticker metadata for: " + ", ".join(missing_metadata)
+        )
+
+    for name in external_files:
+        item = {
+            "name": name,
+            **EXTERNAL_STICKER_METADATA[name],
+            "file": str(CURATED_STICKERS_V2_DIR / f"{name}.png"),
+        }
         combined[name] = item
 
     with open(STICKER_METADATA_V2_FILE, "w", encoding="utf-8") as f:
@@ -804,7 +697,7 @@ def main():
     print(f"Copied external selected stickers to curated: {len(copied_external)}")
     print(f"Curated sticker directory: {CURATED_STICKERS_V2_DIR}")
     print()
-    print("If you added external emoji stickers, add their metadata manually to:")
+    print("Combined generated and external metadata:")
     print(STICKER_METADATA_V2_FILE)
 
 
