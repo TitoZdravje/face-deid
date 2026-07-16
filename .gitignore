@@ -220,6 +220,7 @@ __marimo__/
 
 data/celeba/
 outputs/stickered_images/
-outputs/sanity_checks/
+outputs/sanity_checks/sticker_overlay/
+outputs/sanity_checks/top_sticker_examples/
 outputs/results/
 outputs/plots/
